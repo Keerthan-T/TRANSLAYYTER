@@ -1,0 +1,26 @@
+{
+  "base_model": "facebook/nllb-200-distilled-600M",
+  "source_language": "eng_Latn",
+  "target_language": "kan_Knda",
+  "training_dataset": "ramachandrajoshi/english-kannada-cleaned",
+  "train_csv": "train/train_part_1.csv",
+  "train_subset_rows": 600,
+  "targeted_draft_rows": 21,
+  "optimization_steps": 150,
+  "learning_rate": 0.0002,
+  "lora_rank": 8,
+  "heldout_validation_sentences": 12,
+  "baseline_bleu": 11.169702104998542,
+  "finetuned_bleu": 11.45199840606658,
+  "baseline_chrf2": 55.794489053771514,
+  "finetuned_chrf2": 55.16864303625244,
+  "greeting_before": [
+    "ಗುಡ್ ಮಾರ್ನಿಂಗ್!",
+    "ಗುಡ್ ಮಾರ್ನಿಂಗ್. ನನ್ನ ಹೆಸರು ರಾಹುಲ್."
+  ],
+  "greeting_after": [
+    "ಶುಭೋದಯ!",
+    "ಶುಭೋದಯ. ನನ್ನ ಹೆಸರು ರಾಹುಲ್."
+  ],
+  "note": "Targeted greeting probes are IN the training set; held-out metrics from separate validation file."
+}
